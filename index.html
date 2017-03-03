@@ -1,5 +1,40 @@
+<!DOCTYPE html>
 <html>
-    <body ng-app="chittiReminders">
-        <ng-include="'reminderListView.html'">
-    </body>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Acme Product Management</title>
+    <!-- Style sheets -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body ng-app="chittiReminders">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Acme Product Management</div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div ng-include="'app/reminders/reminderListView.html'"></div>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-mocks.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app/app.ts"></script>
+    
+    <!-- Domain Classes -->
+
+    <!-- Services -->
+
+    <!-- Controllers -->
+</body>
 <html>

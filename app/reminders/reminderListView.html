@@ -1,0 +1,39 @@
+<div class="panel panel-primary"
+     ng-controller="ReminderListCtrl as vm">
+    <div class="panel-heading"
+         style="font-size:large">{{::vm.title}}
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+            <tr>
+                <td>
+                    <button type="button"
+                            class="btn btn-primary"
+                            ng-click="vm.toggleImage()">
+                        {{vm.showImage ? "Hide" : "Show"}} Image
+                    </button>
+                </td>
+                <td>Type</td>
+                <td>Title</td>
+                <td>Due Date</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="reminder in vm.reminders">
+                <td>
+                    <img ng-if="vm.showImage"
+                         ng-src="{{reminder.imageUrl}}"
+                         style="width:50px;margin:2px"
+                         title="{{reminder.type}}">
+                </td>
+                <td>{{ reminder.type }}</td>
+                <td>{{ reminder.title}}</td>
+                <td>{{ reminder.dueDate | date }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
