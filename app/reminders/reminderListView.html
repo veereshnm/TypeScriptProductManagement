@@ -6,7 +6,6 @@
 
     <div class="panel-body">
         <table class="table">
-
             <thead>
             <tr>
                 <td>
@@ -29,9 +28,9 @@
                          style="width:50px;margin:2px"
                          title="{{reminder.type}}">
                 </td>
-                <td>{{ reminder.type }}</td>
-                <td>{{ reminder.title}}</td>
-                <td>{{ reminder.dueDate | date }}</td>
+                <td>{{ reminder.reminderType }}</td>
+                <td>{{ reminder.reminderTitle}}</td>
+                <td>{{ reminder.reminderDueDate | date }}</td>
             </tr>
             </tbody>
         </table>
