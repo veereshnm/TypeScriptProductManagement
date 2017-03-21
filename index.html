@@ -3,14 +3,14 @@
 
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Acme Product Management</title>
+    <title>Chitti Reminders</title>
     <!-- Style sheets -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
 </head>
 
-<body ng-app="chittiReminders">
+<body ng-app="productManagement">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -18,24 +18,30 @@
             </div>
         </div>
     </nav>
+
     <div class="container">
-        <div ng-include="'app/reminders/reminderListView.html'"></div>
+        <div ng-include="'app/products/productListView.html'"></div>
     </div>
 
     <!-- Library Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-mocks.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-mocks.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
     
     <!-- Application Script -->
-    <script src="app/app.ts"></script>
+    <script src="app/app.js"></script>
     
     <!-- Domain Classes -->
+    <script src="app/products/products.js"></script>
 
     <!-- Services -->
+    <script src="app/common/common.services.js"></script>
+    <script src="app/common/dataAccessService.js"></script>
+    <script src="app/common/productResourceMock.js"></script>
 
     <!-- Controllers -->
-    <script src="app/reminders/reminderListCtrl.js"></script>
+    <script src="app/products/productListCtrl.js"></script>
 </body>
 <html>
+

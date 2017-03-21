@@ -1,11 +1,12 @@
 <div class="panel panel-primary"
-     ng-controller="ReminderListCtrl as vm">
+     ng-controller="ProductListCtrl as vm">
     <div class="panel-heading"
          style="font-size:large">{{::vm.title}}
     </div>
 
     <div class="panel-body">
         <table class="table">
+
             <thead>
             <tr>
                 <td>
@@ -15,22 +16,24 @@
                         {{vm.showImage ? "Hide" : "Show"}} Image
                     </button>
                 </td>
-                <td>Type</td>
-                <td>Title</td>
-                <td>Due Date</td>
+                <td>Product</td>
+                <td>Code</td>
+                <td>Available</td>
+                <td>Price</td>
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="reminder in vm.reminders">
+            <tr ng-repeat="product in vm.products">
                 <td>
                     <img ng-if="vm.showImage"
-                         ng-src="{{reminder.imageUrl}}"
+                         ng-src="{{product.imageUrl}}"
                          style="width:50px;margin:2px"
-                         title="{{reminder.type}}">
+                         title="{{product.productName}}">
                 </td>
-                <td>{{ reminder.reminderType }}</td>
-                <td>{{ reminder.reminderTitle}}</td>
-                <td>{{ reminder.reminderDueDate | date }}</td>
+                <td>{{ product.productName}} </td>
+                <td>{{ product.productCode }}</td>
+                <td>{{ product.releaseDate | date }}</td>
+                <td>{{ product.price | currency }}</td>
             </tr>
             </tbody>
         </table>
